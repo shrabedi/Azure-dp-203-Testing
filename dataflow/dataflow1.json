@@ -1,0 +1,107 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "DelimitedText1",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "AzureSqlTable1",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [],
+			"scriptLines": [
+				"source(output(",
+				"          S_No as string,",
+				"          E_Code as string,",
+				"          Name as string,",
+				"          DOJ as string,",
+				"          O_Email as string,",
+				"          Probition as string,",
+				"          CellNo as string,",
+				"          Designation as string,",
+				"          CNIC as string,",
+				"          Status as string,",
+				"          DOE as string,",
+				"          PG as string,",
+				"          Father_Name as string,",
+				"          DOB as string,",
+				"          Address as string,",
+				"          PostalCode as string,",
+				"          Telephone as string,",
+				"          P_Email as string,",
+				"          EOBI as string,",
+				"          LastModifiedDateTime as string,",
+				"          Pic as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          S_No as double,",
+				"          E_Code as string,",
+				"          Name as string,",
+				"          DOJ as timestamp,",
+				"          O_Email as string,",
+				"          Probition as double,",
+				"          CellNo as string,",
+				"          Designation as string,",
+				"          CNIC as string,",
+				"          Status as string,",
+				"          DOE as string,",
+				"          PG as string,",
+				"          Father_Name as string,",
+				"          DOB as string,",
+				"          Address as string,",
+				"          PostalCode as string,",
+				"          Telephone as string,",
+				"          P_Email as string,",
+				"          EOBI as string,",
+				"          LastModifiedDateTime as timestamp,",
+				"          Pic as string",
+				"     ),",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          E_Code,",
+				"          Name,",
+				"          O_Email,",
+				"          CellNo,",
+				"          Designation,",
+				"          CNIC,",
+				"          Status,",
+				"          DOE,",
+				"          PG,",
+				"          Father_Name,",
+				"          DOB,",
+				"          Address,",
+				"          PostalCode,",
+				"          Telephone,",
+				"          P_Email,",
+				"          EOBI,",
+				"          Pic",
+				"     )) ~> sink1"
+			]
+		}
+	}
+}

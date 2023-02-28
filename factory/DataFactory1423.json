@@ -1,0 +1,9 @@
+{
+	"name": "DataFactory1423",
+	"location": "southeastasia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ca3a4772-bf28-4ec9-80ff-2794e84b6291",
+		"tenantId": "795f516a-f355-49cb-9d8f-3980e99495f9"
+	}
+}

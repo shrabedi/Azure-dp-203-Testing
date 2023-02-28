@@ -1,0 +1,108 @@
+{
+	"name": "AzureSqlTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "S_No",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "E_Code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DOJ",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "O_Email",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Probition",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "CellNo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Designation",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CNIC",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Status",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DOE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PG",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Father_Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DOB",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Address",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PostalCode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Telephone",
+				"type": "nvarchar"
+			},
+			{
+				"name": "P_Email",
+				"type": "nvarchar"
+			},
+			{
+				"name": "EOBI",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LastModifiedDateTime",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Pic",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Active"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,6 @@
+{
+	"name": "integrationRuntime3-MyOwnComputer",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
